@@ -1,0 +1,65 @@
+.container{
+    width: 350px;
+    height: 240px;
+    font-size: 16px;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-box{
+    width: 100%;
+    height: 44px;
+    margin-bottom: 16px;
+}
+.header-box .month-select{
+    width: 44px;
+    height: 44px;
+}
+
+.header-box .month-select::before{
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid gray;
+    border-left: 2px solid gray;
+}
+.header-box .month-select:nth-of-type(1)::before {
+    transform: rotate(-45deg);
+}
+.header-box .month-select:nth-of-type(3)::before {
+    transform: rotate(135deg);
+}
+.header-box .month-select:hover{
+    background-color: #e6e6e6;
+}
+
+.grid-body{
+    display: grid;
+    grid-template-columns: repeat(7, 50px);
+}
+.grid-body .day-button{
+    height: 36px;
+    background-color: white;
+}
+.grid-body .day-button:hover{
+    background-color: #e6e6e6;
+}
+.grid-body .day-button.chosen{
+    background-color: #006edc;
+    color: white;
+}
+.grid-body .day-button.today{
+    background-color: #ffff76;
+}
+.grid-body .day-button.non-current-month{
+    color: #757575;
+}
